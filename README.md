@@ -1,7 +1,8 @@
 # MyHexletSolutions
-
-# My solutions for Hexlet exercises:
- *ul PHP
- *ul HTTP
+____
+### My solutions for Hexlet exercises:
+____
+- [X] PHP
+- [X] HTTP
 
 
