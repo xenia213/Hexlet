@@ -1,0 +1,26 @@
+- Создайте таблицу cars со следующими полями:
+user_first_name - имя пользователя (соответствующее имени в таблице users)
+brand - марка машины
+model - конкретная модель
+
+- Добавьте в таблицу users две записи с именами arya и sansa. Сама таблица 
+добавляется в базу данных автоматически (смотрите файл init.sql)
+
+- Добавьте в таблицу cars 5 произвольных записей. Две из них должны указывать 
+на первого пользователя (соответствие по имени пользователя), а три других - на второго.
+
+***solution***
+
+CREATE TABLE cars (
+    user_first_name varchar(255),
+    brand  varchar(255),
+    model  varchar(255)
+);
+
+INSERT INTO users VALUES ('arya', 'Uste', '1832-10-11'), ('sansa', 'Usty', '1832-12-11');
+INSERT INTO cars  
+VALUES ('arya', 'ford', 'm4'), 
+('arya', 'bmw', 'v3'), 
+('sansa', 'tuy', 'e3'), 
+('sansa', 'vector', 'w2'), 
+('sansa', 'Idontknow', 't5');

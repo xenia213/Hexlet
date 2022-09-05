@@ -1,0 +1,8 @@
+- Составьте запрос, который извлекает из таблицы users все уникальные 
+значения поля house отсортированные по возрастанию.
+
+***solution***
+
+SELECT DISTINCT house 
+FROM users
+ORDER BY house;

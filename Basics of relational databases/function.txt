@@ -1,0 +1,7 @@
+- Составьте запрос, который извлекает из таблицы users количество записей, 
+у которых значение поля house равно stark.
+
+***solution***
+
+SELECT count(*) FROM users
+WHERE house = 'stark';

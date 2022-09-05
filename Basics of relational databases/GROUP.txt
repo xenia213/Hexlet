@@ -1,0 +1,14 @@
+- Составьте запрос (к таблице users), который считает количество 
+пользователей, рождённых (поле birthday) в каждом году (из тех, что есть 
+в birthday) по следующим правилам:
+
+- Анализируются только те пользователи, у которых указана дата рождения.
+- Выборка отсортирована по году рождения в прямом порядке.
+
+***solution***
+
+SELECT EXTRACT(year FROM birthday) AS year_of_birthday, COUNT(*)
+  FROM users
+  WHERE birthday IS NOT NULL
+  GROUP BY year_of_birthday
+  ORDER BY year_of_birthday;

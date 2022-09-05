@@ -1,0 +1,48 @@
+- В базе данных содержится таблица old_cities, следующей структуры
+
+country	region	city
+Россия	Татарстан	Бугульма
+Россия	Татарстан	Казань
+Россия	Самарская область	Тольятти
+
+- Город в этой таблице зависит и от региона и от страны. Зависимость от 
+региона прямая, а вот от страны город зависит косвенно, так как страна 
+определяется регионом.
+
+solution.sql
+- Создайте три таблицы countries, country_regions и country_region_cities, 
+в которых отобразите нормализованную структуру исходной таблицы old_cities. 
+Создайте суррогатный первичный ключ для каждой из таблиц. Не забудьте указать 
+внешний ключ. Поле для имени сущности в каждой таблице назовите именем name.
+ Все ключи должны иметь тип bigint.
+
+- Добавьте в созданные таблицы те же записи, что и в исходной таблице, но в нормализованной форме.
+
+***solution***
+
+CREATE TABLE countries (
+    id bigint PRIMARY KEY,
+    country varchar(255)
+);
+
+CREATE TABLE country_regions (
+    id bigint PRIMARY KEY,
+    country_id bigint REFERENCES countries (id),
+    region varchar(255)
+);
+
+CREATE TABLE country_region_cities (
+    id bigint PRIMARY KEY,
+    country_region_id bigint REFERENCES country_regions (id),
+    name varchar(255)
+);
+INSERT INTO countries (id, country) VALUES (1, 'Россия');
+
+INSERT INTO country_regions (id, country_id, region)
+VALUES (1, 1, 'Татарстан'), 
+(2, 1, 'Самарская область');
+
+INSERT INTO country_region_cities (id, country_region_id, name)
+VALUES (1, 1, 'Бугульма'), 
+(2, 1, 'Казань'), 
+(3, 2, 'Тольятти');
