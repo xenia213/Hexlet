@@ -1,0 +1,10 @@
+/vendor/
+logs
+*.swo
+*.swp
+*.cache
+*.vscode
+build
+PHP/PHP: Automatic testing/PHPUnit
+PHP/Trials/Sequences/html
+PHP/Trials/Sequences/select.php
