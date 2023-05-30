@@ -5,6 +5,20 @@ logs
 *.cache
 *.vscode
 build
-PHP/PHP: Automatic testing/PHPUnit
+PHP/PHP Automatic testing/PHPUnit
 PHP/Trials/Sequences/html
 PHP/Trials/Sequences/select.php
+PHP/PHP Trees/Trees
+PHP/Trials/PHP Trees/itinerary.php
+PHP/Trials/PHP Trees/combine.php
+PHP/Trials/OOP/Solution
+php-ds
+composer.json
+Collect
+Carbon
+PHP/PHP Object Oriented Design/SymfonyString
+composer.lock
+PHP/Trials/PHP Object Oriented Design/ObjInt
+PHP/Trials/PHP Object Oriented Design/Enumerable
+PHP/Project
+PHP/Trials/PHP Trees/sortDeps copy.php
